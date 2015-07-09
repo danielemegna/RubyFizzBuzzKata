@@ -1,23 +1,28 @@
 describe "FizzBuzz" do
 
   it "number return number" do
-    expect(fizzbuzz(2)).to eq("2")
-    expect(fizzbuzz(4)).to eq("4")
+    fbExpect(2, "2")
+    fbExpect(4, "4")
   end
 
   it "multiple of three should return Fizz" do
-    expect(fizzbuzz(3)).to eq("Fizz")
-    expect(fizzbuzz(6)).to eq("Fizz")
-    expect(fizzbuzz(12)).to eq("Fizz")
-    expect(fizzbuzz(33)).to eq("Fizz")
+    fbExpect(3, "Fizz")
+    fbExpect(6, "Fizz")
+    fbExpect(12, "Fizz")
+    fbExpect(33, "Fizz")
   end
 
   it "multiple of five should return Buzz" do
-    expect(fizzbuzz(5)).to eq("Buzz")
-    expect(fizzbuzz(10)).to eq("Buzz")
-    expect(fizzbuzz(20)).to eq("Buzz")
-    expect(fizzbuzz(85)).to eq("Buzz")
+    fbExpect(5, "Buzz")
+    fbExpect(10, "Buzz")
+    fbExpect(20, "Buzz")
+    fbExpect(85, "Buzz")
   end
+
+  def fbExpect(n, str)
+    expect(fizzbuzz(n)).to eq(str)
+  end
+
 
   def fizzbuzz(n)
 
