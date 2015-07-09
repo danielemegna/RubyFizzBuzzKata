@@ -19,6 +19,11 @@ describe "FizzBuzz" do
     fbExpect(85, "Buzz")
   end
 
+  it "multiple of three and five should return FizzBuzz" do
+    skip "we want to refactoring before.."
+    fbExpect(15, "FizzBuzz")
+  end
+
   def fbExpect(n, str)
     expect(fizzbuzz(n)).to eq(str)
   end
@@ -31,10 +36,15 @@ describe "FizzBuzz" do
       5 => 'Buzz'
     }
 
+    result = ""
     rules.each do |key, value|
       if(n % key == 0)
-        return value 
+        result << value  
       end
+    end
+
+    if(result != '')
+      return result
     end
 
     n.to_s
