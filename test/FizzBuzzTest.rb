@@ -7,10 +7,12 @@ describe "FizzBuzz" do
 
   it "multiple of three should return Fizz" do
     expect(fizzbuzz(3)).to eq("Fizz")
+    expect(fizzbuzz(6)).to eq("Fizz")
+    expect(fizzbuzz(12)).to eq("Fizz")
   end
 
   def fizzbuzz(n)
-    if(n == 3)
+    if(n % 3 == 0)
       return "Fizz"
     end
 
