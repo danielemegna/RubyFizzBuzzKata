@@ -20,15 +20,18 @@ describe "FizzBuzz" do
   end
 
   def fizzbuzz(n)
-    if(n % 3 == 0)
-      return "Fizz"
-    end
 
-    if(n % 5 == 0)
-      return "Buzz"
+    rules = {
+      3 => 'Fizz',
+      5 => 'Buzz'
+    }
+
+    rules.each do |key, value|
+      if(n % key == 0)
+        return value 
+      end
     end
 
     n.to_s
   end
 end
-
