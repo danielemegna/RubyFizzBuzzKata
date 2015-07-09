@@ -20,7 +20,6 @@ describe "FizzBuzz" do
   end
 
   it "multiple of three and five should return FizzBuzz" do
-    skip "we want to refactoring before.."
     fbExpect(15, "FizzBuzz")
   end
 
@@ -43,7 +42,7 @@ describe "FizzBuzz" do
       end
     end
 
-    if(result != '')
+    if(!result.empty?)
       return result
     end
 
