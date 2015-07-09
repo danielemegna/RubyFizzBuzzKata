@@ -5,7 +5,15 @@ describe "FizzBuzz" do
     expect(fizzbuzz(4)).to eq("4")
   end
 
+  it "multiple of three should return Fizz" do
+    expect(fizzbuzz(3)).to eq("Fizz")
+  end
+
   def fizzbuzz(n)
+    if(n == 3)
+      return "Fizz"
+    end
+
     n.to_s
   end
 end
