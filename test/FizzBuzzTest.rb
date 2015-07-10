@@ -24,12 +24,16 @@ describe "FizzBuzz" do
   end
 
   def fbExpect(n, str)
-    expect(fizzbuzz(n)).to eq(str)
+    fb = FizzBuzz.new
+    expect(fb.fizzbuzz(n)).to eq(str)
   end
 
+end
+
+
+class FizzBuzz
 
   def fizzbuzz(n)
-
     rules = {
       3 => 'Fizz',
       5 => 'Buzz'
@@ -48,4 +52,5 @@ describe "FizzBuzz" do
 
     n.to_s
   end
+  
 end
