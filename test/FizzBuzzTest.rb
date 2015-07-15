@@ -1,6 +1,10 @@
 load 'src/FizzBuzz.rb'
 
 describe "FizzBuzz" do
+  
+  before(:each) do
+    @fb = FizzBuzz.new
+  end
 
   it "number return number" do
     fbExpect(2, "2")
@@ -36,8 +40,7 @@ describe "FizzBuzz" do
   end
 
   def fbExpect(n, str)
-    fb = FizzBuzz.new
-    expect(fb.fizzbuzz(n)).to eq(str)
+    expect(@fb.fizzbuzz(n)).to eq(str)
   end
 
 end
