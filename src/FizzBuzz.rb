@@ -8,7 +8,7 @@ class FizzBuzz
 
     result = ""
     rules.each do |key, value|
-      if(n % key == 0)
+      if(isNumberCompatible(n, key))
         result << value  
       end
     end
@@ -18,6 +18,11 @@ class FizzBuzz
     end
 
     n.to_s
+  end
+
+  private
+  def isNumberCompatible(number, ruleNumber)
+    (number % ruleNumber == 0)
   end
   
 end

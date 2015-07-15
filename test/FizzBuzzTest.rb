@@ -1,4 +1,4 @@
-load 'FizzBuzz.rb'
+load 'src/FizzBuzz.rb'
 
 describe "FizzBuzz" do
 
