@@ -22,7 +22,8 @@ class FizzBuzz
 
   private
   def isNumberCompatible(number, ruleNumber)
-    (number % ruleNumber == 0)
+    (number % ruleNumber == 0) ||
+    (number.to_s.include? ruleNumber.to_s)
   end
   
 end
