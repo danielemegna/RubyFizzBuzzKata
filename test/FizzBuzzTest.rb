@@ -39,6 +39,14 @@ describe "FizzBuzz" do
     fbExpect(1434, "Fizz")
   end
 
+  it "numbers who contains 5 are also Buzz" do
+    fbExpect(52, "Buzz");
+    fbExpect(54, "FizzBuzz");
+    fbExpect(56, "Buzz");
+    fbExpect(57, "FizzBuzz");
+    fbExpect(851, "Buzz");
+  end
+
   def fbExpect(n, str)
     expect(@fb.fizzbuzz(n)).to eq(str)
   end
